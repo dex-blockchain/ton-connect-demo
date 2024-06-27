@@ -1,6 +1,7 @@
 import { TonConnectUI,THEME } from '@tonconnect/ui';
 import { Cell } from '@ton/ton';
 
+
 //  Create TonConnectUI instance
 export const tonConnectUI = new TonConnectUI({ //连接应用
     manifestUrl: 'https://ton-connect-demo.netlify.app/tonconnect-manifest.json', // public 目录下tonconnect-manifest.json，根据项目情况修改

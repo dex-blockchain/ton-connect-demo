@@ -5,6 +5,7 @@ Try it out https://ton-connect-demo.netlify.app/
 - https://docs.ton.org/develop/dapps/ton-connect/
 - https://github.com/ton-connect/sdk/tree/main/packages/ui
 - https://ton-connect.github.io/sdk/modules/_tonconnect_ui.html
+- https://tonviewer.com/
 - Query wallet address https://ton.org/address/
 - Test Network Block Browser https://testnet.tonscan.org/
 - Main network block browser https://tonscan.org/
@@ -43,3 +44,6 @@ npm run preview
 - main.js：Project Entry JS
 - index.html: Project page
 - public: Static resource public directory
+
+## Reason for transfer being returned
+- Check if the account is active or inactive, and transfer a sum of money to each other to become active
