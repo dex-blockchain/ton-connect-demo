@@ -1,7 +1,7 @@
 {
-  "url": "https://ton.orcalab.tech/demo-dapp-with-react-ui/",
+  "url": "https://ton-connect-demo.netlify.app",
   "name": "ton connect demo",
-  "iconUrl": "https://ton.orcalab.tech/demo-dapp-with-react-ui/apple-touch-icon.png",
-  "termsOfUseUrl": "https://ton-connect.github.io/demo-dapp-with-react-ui/terms-of-use.txt",
-  "privacyPolicyUrl": "https://ton-connect.github.io/demo-dapp-with-react-ui/privacy-policy.txt"
+  "iconUrl": "https://ton-connect-demo.netlify.app/apple-touch-icon.png",
+  "termsOfUseUrl": "https://ton-connect-demo.netlify.app/terms-of-use.txt",
+  "privacyPolicyUrl": "https://ton-connect-demo.netlify.app/privacy-policy.txt"
 }

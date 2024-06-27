@@ -1,12 +1,13 @@
-import { TonConnectUI } from '@tonconnect/ui';
+import { TonConnectUI,THEME } from '@tonconnect/ui';
 import { Cell } from '@ton/ton';
 
 //  Create TonConnectUI instance
 export const tonConnectUI = new TonConnectUI({ //连接应用
-    manifestUrl: 'https://ton.orcalab.tech/demo-dapp-with-react-ui/tonconnect-manifest.json',
-    buttonRootId: 'ton-connect-button',
+    manifestUrl: 'https://ton-connect-demo.netlify.app/tonconnect-manifest.json', // public 目录下tonconnect-manifest.json，根据项目情况修改
+    buttonRootId: 'ton-connect-button', // Connect Wallect Button Id,自定义Button打开不需要配置
+    uiPreferences: {theme: THEME.LIGHT }, // 配置UI主题色有亮色和深色可选
     actionsConfiguration: {
-        twaReturnUrl: 'https://t.me/Simple_Dao_Bot/orders' //返回地址，只有在TMA模式下打开dApp时才会应用该链接。
+        twaReturnUrl: 'https://t.me/Simple_Dao_Bot/orders' //返回地址，根据项目情况修改,只有在TMA模式下打开dApp时才会应用该链接。
     }
 });
 
@@ -41,7 +42,7 @@ const unsubscribe = tonConnectUI.onStatusChange(
 );
 
 // getTransactionHash  
-const getTransactionHash = (boc)=>{
+export const getTransactionHash = (boc)=>{
     console.log('boc',boc)
     // 将Base64编码的Boc数据解码为二进制格式
     const bocBuffer = Buffer.from(boc, 'base64');
@@ -69,7 +70,7 @@ const renderButton = ()=>{
 
 
 // Send transaction
-const sendTransaction = async (transaction)=>{
+export const sendTransaction = async (transaction)=>{
    return await tonConnectUI.sendTransaction(transaction)
   }
 
@@ -77,6 +78,7 @@ const sendTransaction = async (transaction)=>{
 
 const renderConnectWalletButton = ()=>{
    document.querySelector('#transaction-box').innerHTML=` <button id="connectWalletSendTxns"  type="button">Connect wallet to send the transaction</button>`
+   // 自定义button打开Modal
    document.querySelector('#connectWalletSendTxns').addEventListener('click',async()=>{
    tonConnectUI.openModal()
 })
@@ -92,7 +94,7 @@ const renderBoc = (boc)=>{
 
 
 // Disconnect wallet
- const disconnectWallet = async ()=>{
+ export const disconnectWallet = async ()=>{
     await tonConnectUI.disconnect();
  }
 
