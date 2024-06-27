@@ -1,5 +1,5 @@
 import { TonConnectUI,THEME } from '@tonconnect/ui';
-import { Cell } from '@ton/ton';
+import { Cell,toNano } from '@ton/ton';
 
 //  Create TonConnectUI instance
 export const tonConnectUI = new TonConnectUI({ //连接应用
@@ -20,7 +20,7 @@ const transaction = {
         // The receiver's address.
         address: '0QCn3eLz1a8OUYSvOUkRmYjMT9Wd0Zsz5_OEQLbCnNAv74aC',
         // Amount to send in nanoTON. For example, 0.005 TON is 5000000 nanoTON.
-        amount: '20000000',
+        amount: toNano('0.02'),
       }
   
     ],
