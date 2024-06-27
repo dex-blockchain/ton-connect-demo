@@ -12,6 +12,8 @@ Try it out https://ton-connect-demo.netlify.app/
 
 ## Project Scripts
 
+### Install Dependencies
+
 ```sh
 npm install
 ```
