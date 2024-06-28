@@ -25,7 +25,7 @@ const transaction = {
       },
       {
         // The receiver's address.
-        address: '0QA74YYldkrTSYEVTZZke6N3G2J8PBxwZ4bX5YnyVm-ntFty',
+        address: 'UQDTFsNMabhWWQub-HfMsCtHngXJubl1iDdmM__rM-KtGXGR',
         // Amount to send in nanoTON. For example, 0.005 TON is 5000000 nanoTON.
         amount: '20000000',
       }
